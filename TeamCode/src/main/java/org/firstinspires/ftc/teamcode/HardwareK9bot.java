@@ -29,17 +29,18 @@ public class HardwareK9bot
     public DcMotor leftMotor   = null;
     public DcMotor rightMotor  = null;
     public DcMotor fingerMotor = null;
-    //public Servo arm         = null;
-    public Servo claw        = null;
-    public Servo lobster     = null;
+    public DcMotor armMotor    = null;
+    //public Servo claw        = null;
+    //public Servo lobster     = null;
     public Servo colourStick = null;
 
-    public final static double ARM_HOME = 0.2;
-    public final static double CLAW_HOME = 0.2;
+    //public final static double ARM_HOME = 0.2;
+    //public final static double CLAW_HOME = 0.2;
+    public final static double COLOURSTICK_HOME = 0.2;
     public final static double ARM_MIN_RANGE  = 0.20;
-    //public final static double ARM_MAX_RANGE  = 0.90;
-    public final static double CLAW_MIN_RANGE  = 0.20;
-    public final static double CLAW_MAX_RANGE  = 0.7;
+    public final static double ARM_MAX_RANGE  = 0.90;
+    //public final static double CLAW_MIN_RANGE  = 0.20;
+    //public final static double CLAW_MAX_RANGE  = 0.7;
 
     /* Local OpMode members. */
     HardwareMap hwMap  = null;
@@ -58,6 +59,7 @@ public class HardwareK9bot
         leftMotor   = hwMap.dcMotor.get("left_drive");
         rightMotor  = hwMap.dcMotor.get("right_drive");
         fingerMotor = hwMap.dcMotor.get("chicken_fingers");
+        armMotor    = hwMap.dcMotor.get("arm");
         leftMotor.setDirection(DcMotor.Direction.REVERSE);
 
         // Set all motors to zero power
@@ -70,13 +72,11 @@ public class HardwareK9bot
         rightMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
         // Define and initialize ALL installed servos.
-        //arm = hwMap.servo.get("arm");
-        claw = hwMap.servo.get("claw");
-        lobster = hwMap.servo.get("lobster");
+        //claw = hwMap.servo.get("claw");
+        //lobster = hwMap.servo.get("lobster");
         colourStick = hwMap.servo.get("colourStick");
 
-        //arm.setPosition(ARM_HOME);
-        claw.setPosition(CLAW_HOME);
+        //claw.setPosition(CLAW_HOME);
     }
 
     /***
