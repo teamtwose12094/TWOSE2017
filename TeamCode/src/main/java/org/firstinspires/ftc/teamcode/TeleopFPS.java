@@ -52,7 +52,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
 
-@TeleOp(name="K9bot: Teleop Tank", group="K9bot")
+@TeleOp(name="Teleop FPS", group="K9bot")
 public class TeleopFPS extends LinearOpMode {
 
     /* Declare OpMode members. */

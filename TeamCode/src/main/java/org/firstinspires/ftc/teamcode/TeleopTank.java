@@ -53,7 +53,7 @@ import com.qualcomm.robotcore.util.Range;
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
 
-@TeleOp(name="K9bot: Teleop Tank", group="K9bot")
+@TeleOp(name="Teleop Tank", group="K9bot")
 public class TeleopTank extends LinearOpMode {
 
     /* Declare OpMode members. */
@@ -76,7 +76,7 @@ public class TeleopTank extends LinearOpMode {
         robot.init(hardwareMap);
 
         // Send telemetry message to signify robot waiting;
-        telemetry.addData("Say", "Hello Driver, it is I, the FRENCHIEST FRY");    //
+        telemetry.addData("Hello human,", "it is I, the FRENCHIEST FRY");    //
         telemetry.update();
 
         // Wait for the game to start (driver presses PLAY)
@@ -105,27 +105,10 @@ public class TeleopTank extends LinearOpMode {
             } else {
                 robot.armMotor.setPower(0);
             }
-            if (gamepad1.x) {
+            if (gamepad1.b) {
+                colourStickPosition = COLOURSTICK_UP;
                 //colourStickPosition = COLOURSTICK_DOWN;
                 //clawPosition += CLAW_SPEED;
-            } else if (gamepad1.b) {
-                colourStickPosition -= COLOURSTICK_UP;
-                //clawPosition -= CLAW_SPEED;
-                // Move both servos to new position.
-                //armPosition  = Range.clip(armPosition, robot.ARM_MIN_RANGE, robot.ARM_MAX_RANGE);
-                //robot.arm.setPosition(armPosition);
-                //clawPosition = Range.clip(clawPosition, robot.CLAW_MIN_RANGE, robot.CLAW_MAX_RANGE);
-                //robot.claw.setPosition(clawPosition);
-
-                // Send telemetry message to signify robot running;
-                //telemetry.addData("arm",   "%.2f", armPosition);
-                //telemetry.addData("claw",  "%.2f", clawPosition);
-                telemetry.addData("left", "%.2f", left);
-                telemetry.addData("right", "%.2f", right);
-                telemetry.update();
-
-                // Pause for metronome tick.  40 mS each cycle = update 25 times a second.
-                robot.waitForTick(40);
             }
         }
     }
