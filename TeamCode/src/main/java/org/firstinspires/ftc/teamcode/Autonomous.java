@@ -100,7 +100,8 @@ public abstract class Autonomous extends LinearOpMode {
 
     void release (){
         //gives power to motors
-        //robot.lobster.setPosition(90);
+        robot.clawLeft.setPosition(0);
+        robot.clawRight.setPosition(0);
 
     }
 

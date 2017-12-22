@@ -54,7 +54,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @TeleOp(name="Teleop FPS", group="K9bot")
 public class TeleopFPS extends LinearOpMode {
-
+//TODO for a more FPS style control (Left analog stick = movement, Right analog stick = turning)
+//TODO check the unit circle for your left analog stick.
     /* Declare OpMode members. */
     HardwareK9bot robot = new HardwareK9bot();              // Use a K9's hardware
     double colourStickPosition = robot.COLOURSTICK_HOME;
