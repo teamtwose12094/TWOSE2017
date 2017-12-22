@@ -100,8 +100,8 @@ public abstract class Autonomous extends LinearOpMode {
 
     void release (){
         //gives power to motors
-        robot.clawLeft.setPosition(0);
-        robot.clawRight.setPosition(0);
+        robot.clawLeft.setPosition(0.5);
+        robot.clawRight.setPosition(0.5);
 
     }
 

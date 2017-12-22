@@ -93,11 +93,11 @@ public class TeleopTank extends LinearOpMode {
 
             // Use gamepad Y & A raise and lower the arm
             if (gamepad1.a) {
-                robot.armMotor.setPower(0.7);
+                robot.clawRight.setPosition(0.7);
 
                 //armPosition += ARM_SPEED;
             } else if (gamepad1.y) {
-                robot.armMotor.setPower(-0.7);
+                robot.clawLeft.setPosition(-0.7);
 
                 //armPosition -= ARM_SPEED;
 
@@ -106,7 +106,7 @@ public class TeleopTank extends LinearOpMode {
                 robot.armMotor.setPower(0);
             }
             if (gamepad1.b) {
-                colourStickPosition = COLOURSTICK_UP;
+                robot.colourStick.setPosition(COLOURSTICK_UP);
                 //colourStickPosition = COLOURSTICK_DOWN;
                 //clawPosition += CLAW_SPEED;
             }
