@@ -110,6 +110,7 @@ public class TeleopTank extends LinearOpMode {
                 //colourStickPosition = COLOURSTICK_DOWN;
                 //clawPosition += CLAW_SPEED;
             }
+
         }
     }
 }

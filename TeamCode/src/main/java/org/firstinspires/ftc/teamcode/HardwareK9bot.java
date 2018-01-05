@@ -35,6 +35,7 @@ public class HardwareK9bot
     public Servo colourStick = null;
     public Servo clawLeft = null;
     public Servo clawRight = null;
+    public Servo sensorstick = null;
     //public final static double ARM_HOME = 0.2;
     //public final static double CLAW_HOME = 0.2;
     public final static double COLOURSTICK_HOME = 0.2;
@@ -65,9 +66,12 @@ public class HardwareK9bot
         armMotor    = hwMap.dcMotor.get("arm");
         leftMotor.setDirection(DcMotor.Direction.REVERSE);
 
+
         // Set all motors to zero power
         leftMotor.setPower(0);
         rightMotor.setPower(0);
+        fingerMotor.setPower(0);
+        armMotor.setPower(0);
 
         // Set all motors to run without encoders.
         // May want to use RUN_USING_ENCODERS if encoders are installed.
