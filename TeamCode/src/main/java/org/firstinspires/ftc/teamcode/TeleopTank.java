@@ -62,6 +62,10 @@ public class TeleopTank extends LinearOpMode {
     //double          armPosition     = robot.ARM_HOME;                   // Servo safe position
     //double          clawPosition    = robot.CLAW_HOME;                  // Servo safe position
     final double COLOURSTICK_UP = 0;
+    final double OPEN_LEFT = 0.25;
+    final double CLOSE_LEFT = 0.5;
+    final double OPEN_RIGHT = 0.5;
+    final double CLOSE_RIGHT = 0.25;
     //final double    CLAW_SPEED      = 0.01 ;                            // sets rate to move servo
     //final double    ARM_SPEED       = 0.01 ;                            // sets rate to move servo
 
@@ -93,11 +97,11 @@ public class TeleopTank extends LinearOpMode {
 
             // Use gamepad Y & A raise and lower the arm
             if (gamepad1.a) {
-                robot.armMotor.setPower(0.7);
+                robot.armMotor.setPower(-0.7);
 
                 //armPosition += ARM_SPEED;
             } else if (gamepad1.y) {
-                robot.armMotor.setPower(-0.7);
+                robot.armMotor.setPower(0.7);
 
                 //armPosition -= ARM_SPEED;
 
@@ -105,7 +109,16 @@ public class TeleopTank extends LinearOpMode {
             } else {
                 robot.armMotor.setPower(0);
             }
+
             if (gamepad1.b) {
+                robot.clawLeft.setPosition(CLOSE_LEFT);
+                robot.clawRight.setPosition(CLOSE_RIGHT);
+            } else if (gamepad1.x) {
+                robot.clawLeft.setPosition(OPEN_LEFT);
+                robot.clawRight.setPosition(OPEN_RIGHT);
+            }
+
+            if (gamepad1.right_bumper) {
                 robot.colourStick.setPosition(COLOURSTICK_UP);
                 //colourStickPosition = COLOURSTICK_DOWN;
                 //clawPosition += CLAW_SPEED;

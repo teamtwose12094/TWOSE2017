@@ -36,7 +36,7 @@ public class HardwareK9bot
     public Servo clawLeft = null;
     public Servo clawRight = null;
     public Servo sensorstick = null;
-    //public final static double ARM_HOME = 0.2;
+    public final static double ARM_HOME = 0.2;
     //public final static double CLAW_HOME = 0.2;
     public final static double COLOURSTICK_HOME = 0.2;
     public final static double CLAWLEFT_HOME = 0.2;
