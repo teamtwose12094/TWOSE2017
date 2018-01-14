@@ -32,10 +32,9 @@ public class HardwareK9bot
     public DcMotor armMotor    = null;
     //public Servo claw        = null;
     //public Servo lobster     = null;
-    public Servo colourStick = null;
     public Servo clawLeft = null;
     public Servo clawRight = null;
-    public Servo sensorstick = null;
+    public Servo colourStick = null;
     public final static double ARM_HOME = 0.2;
     //public final static double CLAW_HOME = 0.2;
     public final static double COLOURSTICK_HOME = 0.2;

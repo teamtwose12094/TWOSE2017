@@ -34,6 +34,7 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.Range;
 
 /**
@@ -111,11 +112,11 @@ public class TeleopTank extends LinearOpMode {
             }
 
             if (gamepad1.b) {
-                robot.clawLeft.setPosition(CLOSE_LEFT);
-                robot.clawRight.setPosition(CLOSE_RIGHT);
+                robot.clawLeft.setPosition(Servo.MIN_POSITION);
+                robot.clawRight.setPosition(Servo.MAX_POSITION);
             } else if (gamepad1.x) {
-                robot.clawLeft.setPosition(OPEN_LEFT);
-                robot.clawRight.setPosition(OPEN_RIGHT);
+                robot.clawLeft.setPosition(Servo.MIN_POSITION);
+                robot.clawRight.setPosition(Servo.MAX_POSITION);
             }
 
             if (gamepad1.right_bumper) {

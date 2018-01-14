@@ -3,6 +3,8 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
+import static org.firstinspires.ftc.teamcode.HardwareK9bot.COLOURSTICK_HOME;
+
 /**
  * Created by student on 11/24/2016.
  */
@@ -106,6 +108,9 @@ public abstract class Autonomous extends LinearOpMode {
     }
 
     void moveColourSensor (int power){
+    robot.colourStick.setPosition(COLOURSTICK_HOME);
+    }
+    void detectColour (){
 
     }
 }
