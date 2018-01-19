@@ -51,7 +51,7 @@ import com.qualcomm.robotcore.util.Range;
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
 
-@TeleOp(name="K9bot: Telop Tank", group="K9bot")
+@TeleOp(name="K9bot: Teleop Tank", group="K9bot")
 @Disabled
 public class K9botTeleopTank_Linear extends LinearOpMode {
 
@@ -105,6 +105,7 @@ public class K9botTeleopTank_Linear extends LinearOpMode {
             robot.arm.setPosition(armPosition);
             clawPosition = Range.clip(clawPosition, robot.CLAW_MIN_RANGE, robot.CLAW_MAX_RANGE);
             robot.claw.setPosition(clawPosition);
+
 
             // Send telemetry message to signify robot running;
             telemetry.addData("arm",   "%.2f", armPosition);

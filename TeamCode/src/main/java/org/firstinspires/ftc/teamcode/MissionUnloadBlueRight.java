@@ -11,8 +11,7 @@ public class  MissionUnloadBlueRight extends Autonomous {
         moveColourSensor(90);
         detectColour();
         moveColourSensor(-90);
-        move();
-        move(19, 0.7);
+        move(36, 0.7);
         pivot(90, 0.7);
         move(5, 0.7);
         release();

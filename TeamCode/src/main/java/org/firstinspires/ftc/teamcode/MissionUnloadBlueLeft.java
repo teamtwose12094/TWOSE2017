@@ -12,7 +12,7 @@ public abstract class MissionUnloadBlueLeft extends Autonomous implements ColorS
     @Override
     public void runPath() {
         moveColourSensor(90);
-        ColorSensor ColourSensor = new ColorSensor() {
+        /*ColorSensor ColourSensor = new ColorSensor() {
             @Override
             public int red() {
                 return 0;
@@ -85,7 +85,10 @@ public abstract class MissionUnloadBlueLeft extends Autonomous implements ColorS
         };
         if (ColourSensor.blue() > 80) {
             pivot(90, 0.7);
-        }
+        }*/
+        detectColour();
+        moveColourSensor(90);
+        move(3, 0.7);
         pivot(90, 0.7);
         move(19, 0.7);
         pivot(90, 0.7);

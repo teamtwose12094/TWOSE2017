@@ -9,6 +9,8 @@ public class MissionUnloadRedRight extends Autonomous {
     @Override
     public void runPath() {
         moveColourSensor(90);
+        detectColour();
+        moveColourSensor(-90);
         pivot(-90, 0.7);
         move(19, 0.7);
         pivot(-90, 0.7);
