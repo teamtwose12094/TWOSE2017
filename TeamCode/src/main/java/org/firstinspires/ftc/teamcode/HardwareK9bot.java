@@ -30,6 +30,7 @@ public class HardwareK9bot
     public DcMotor rightMotor  = null;
     //public DcMotor fingerMotor = null;
     public DcMotor armMotor    = null;
+    public DcMotor slideMotor = null;
     //public Servo claw        = null;
     //public Servo lobster     = null;
     public Servo clawLeft = null;
@@ -63,6 +64,7 @@ public class HardwareK9bot
         rightMotor  = hwMap.dcMotor.get("right_drive");
         //fingerMotor = hwMap.dcMotor.get("chicken_fingers");
         armMotor    = hwMap.dcMotor.get("arm");
+        slideMotor = hwMap.dcMotor.get("slide");
         leftMotor.setDirection(DcMotor.Direction.REVERSE);
 
 
@@ -71,6 +73,7 @@ public class HardwareK9bot
         rightMotor.setPower(0);
         //fingerMotor.setPower(0);
         armMotor.setPower(0);
+        slideMotor.setPower(0);
 
         // Set all motors to run without encoders.
         // May want to use RUN_USING_ENCODERS if encoders are installed.
