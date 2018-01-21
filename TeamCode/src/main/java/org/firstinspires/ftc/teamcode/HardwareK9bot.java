@@ -36,9 +36,9 @@ public class HardwareK9bot
     public Servo clawRight = null;
     public Servo colourStick = null;
     public final static double ARM_HOME = 0.2;
-    public final static double LEFT_CLAW_HOME = 0.2;
-    public final static double RIGHT_CLAW_HOME = 0.2;
-    public final static double COLOURSTICK_HOME = 0.2;
+    public final static double LEFT_CLAW_HOME = 0.0;
+    public final static double RIGHT_CLAW_HOME = 0.5;
+    public final static double COLOURSTICK_HOME = 1.0;
 
     public final static double ARM_MIN_RANGE  = 0.20;
     public final static double ARM_MAX_RANGE  = 0.90;
@@ -87,6 +87,7 @@ public class HardwareK9bot
 
         clawLeft.setPosition(LEFT_CLAW_HOME);
         clawRight.setPosition(RIGHT_CLAW_HOME);
+        colourStick.setPosition(COLOURSTICK_HOME);
     }
 
     /***
