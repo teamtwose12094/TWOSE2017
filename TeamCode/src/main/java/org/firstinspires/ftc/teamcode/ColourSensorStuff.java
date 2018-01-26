@@ -10,10 +10,12 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
 public class ColourSensorStuff extends Autonomous {
     @Override
     public void runPath() {
-        if (ColorSensor = red);{
+        if (isBlue() == true){
 
             move(-3, 0.7);
         }
+        else if (isRed() == true){
+            move(3, 0.7);
         }
     }
 

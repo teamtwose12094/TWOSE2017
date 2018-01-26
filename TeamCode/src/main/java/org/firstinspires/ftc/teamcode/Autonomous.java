@@ -145,10 +145,10 @@ public abstract class Autonomous extends LinearOpMode {
         SensorRGB = hardwareMap.colorSensor.get("colour");
         //if(SensorRGB.red() = true);
     }
-   // colourSensorThingy() {
-        ColorSensor color_sensor;}
+    public boolean isRed() {
+        ColorSensor color_sensor;
 
-            //color_sensor = hardwareMap.colorSensor.get("color");
+            color_sensor = hardwareMap.colorSensor.get("color");
 
 // ...
             color_sensor.red(); // Red channel value
@@ -160,7 +160,43 @@ public abstract class Autonomous extends LinearOpMode {
             color_sensor.enableLed(true);// Turn the LED on
             color_sensor.enableLed(false); // Turn the LED off
 
+            if (color_sensor.red() > 20){
+                return true;
 
-*\
-}
+            }
+            else{
+                return false;
+    }}
+
+
+        public boolean isBlue() {
+            ColorSensor color_sensor;
+
+            color_sensor = hardwareMap.colorSensor.get("color");
+
+// ...
+            color_sensor.red(); // Red channel value
+            color_sensor.green(); // Green channel value
+            color_sensor.blue();// Blue channel value
+            color_sensor.alpha(); // Total luminosity
+            color_sensor.argb();// Combined color value
+
+            color_sensor.enableLed(true);// Turn the LED on
+            color_sensor.enableLed(false); // Turn the LED off
+
+            if (color_sensor.blue() > 20){
+                return true;
+
+            }
+            else{
+                return false;
+            }}
+
+
+
+
+
+
+
+
 }
