@@ -145,4 +145,22 @@ public abstract class Autonomous extends LinearOpMode {
         SensorRGB = hardwareMap.colorSensor.get("colour");
         //if(SensorRGB.red() = true);
     }
+   // colourSensorThingy() {
+        ColorSensor color_sensor;}
+
+            //color_sensor = hardwareMap.colorSensor.get("color");
+
+// ...
+            color_sensor.red(); // Red channel value
+            color_sensor.green(); // Green channel value
+            color_sensor.blue();// Blue channel value
+            color_sensor.alpha(); // Total luminosity
+            color_sensor.argb();// Combined color value
+
+            color_sensor.enableLed(true);// Turn the LED on
+            color_sensor.enableLed(false); // Turn the LED off
+
+
+*\
+}
 }

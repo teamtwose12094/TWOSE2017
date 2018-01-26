@@ -1,30 +1,23 @@
 package org.firstinspires.ftc.teamcode;
-import com.qualcomm.robotcore.eventloop.opmode.*;
+
 import com.qualcomm.robotcore.hardware.ColorSensor;
-import com.qualcomm.robotcore.hardware.HardwareMap;
 
 /**
- * Created by Instructor on 1/20/2018.
+ * Created by student on 1/20/2017.
  */
 
-public class ColourSensorStuff extends HardwareK9bot{
+@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "MissionCornerBlue", group = "Autonomous")
+public class ColourSensorStuff extends Autonomous {
+    @Override
+    public void runPath() {
+        if (ColorSensor = red);{
 
-    ColorSensor color_sensor;
+            move(-3, 0.7);
+        }
+        }
+    }
 
-    public void init() {
-
-    color_sensor = hwMap.colorSensor.get("color");
-
-// ...
-        color_sensor.red(); // Red channel value
-        color_sensor.green(); // Green channel value
-        color_sensor.blue();// Blue channel value
-        color_sensor.alpha(); // Total luminosity
-        color_sensor.argb();// Combined color value
-
-        color_sensor.enableLed(true);// Turn the LED on
-        color_sensor.enableLed(false); // Turn the LED off
+}
 
 
 
-}}
