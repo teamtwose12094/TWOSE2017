@@ -138,7 +138,7 @@ public abstract class Autonomous extends LinearOpMode {
     }
 
     void moveColourSensor (int power){
-    robot.colourStick.setPosition(COLOURSTICK_HOME);
+    robot.colourStick.setPosition(1.0);
     }
     void detectColour (){
         ColorSensor SensorRGB;
@@ -170,21 +170,21 @@ public abstract class Autonomous extends LinearOpMode {
 
 
         public boolean isBlue() {
-            ColorSensor color_sensor;
+            ColorSensor color;
 
-            color_sensor = hardwareMap.colorSensor.get("color");
+            color = hardwareMap.colorSensor.get("color");
 
 // ...
-            color_sensor.red(); // Red channel value
-            color_sensor.green(); // Green channel value
-            color_sensor.blue();// Blue channel value
-            color_sensor.alpha(); // Total luminosity
-            color_sensor.argb();// Combined color value
+            color.red(); // Red channel value
+            color.green(); // Green channel value
+            color.blue();// Blue channel value
+            color.alpha(); // Total luminosity
+            color.argb();// Combined color value
 
-            color_sensor.enableLed(true);// Turn the LED on
-            color_sensor.enableLed(false); // Turn the LED off
+            color.enableLed(true);// Turn the LED on
+            color.enableLed(false); // Turn the LED off
 
-            if (color_sensor.blue() > 20){
+            if (color.blue() > 20){
                 return true;
 
             }

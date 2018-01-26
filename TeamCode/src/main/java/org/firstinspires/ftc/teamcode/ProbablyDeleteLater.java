@@ -15,15 +15,16 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DeviceInterfaceModule;
 import com.qualcomm.robotcore.hardware.DigitalChannelController;
 import com.qualcomm.robotcore.util.RobotLog;
-
+@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "DiddlyDiddle", group = "Autonomous")
 
 /**
  * Created by Instructor on 1/18/2018.
  */
 
+
 public class ProbablyDeleteLater extends LinearOpMode {
     ColorSensor SensorRGB;
-    DeviceInterfaceModule cdim;
+    //DeviceInterfaceModule cdim;
 
     static final int LED_CHANNEL = 5;
 
@@ -31,15 +32,15 @@ public class ProbablyDeleteLater extends LinearOpMode {
     public void runOpMode() throws InterruptedException{
         hardwareMap.logDevices();
 
-        cdim = hardwareMap.deviceInterfaceModule.get("dim");
+        //cdim = hardwareMap.deviceInterfaceModule.get("dim");
 
-        cdim.setDigitalChannelMode(LED_CHANNEL, DigitalChannelController.Mode.OUTPUT);
+        //cdim.setDigitalChannelMode(LED_CHANNEL, DigitalChannelController.Mode.OUTPUT);
 
         SensorRGB = hardwareMap.colorSensor.get("colour");
 
         boolean bEnabled = true;
 
-        cdim.setDigitalChannelState(LED_CHANNEL, bEnabled);
+        //cdim.setDigitalChannelState(LED_CHANNEL, bEnabled);
 
         //wait one cycle
 
@@ -106,9 +107,10 @@ public class ProbablyDeleteLater extends LinearOpMode {
 // on button press, enable the LED.
                 bEnabled =
                         true
-                ;
+                ;}
 // turn on the LED.
-                cdim
+
+               /*c
                         .setDigitalChannelState(
                                 LED_CHANNEL
                                 , bEnabled);
@@ -130,7 +132,7 @@ public class ProbablyDeleteLater extends LinearOpMode {
                         false
                 ;
 // turn off the LED.
-                cdim
+                c
                         .setDigitalChannelState(
                                 LED_CHANNEL
                                 , bEnabled);
@@ -165,3 +167,4 @@ public class ProbablyDeleteLater extends LinearOpMode {
 
 
 
+}*/}}}

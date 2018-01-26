@@ -9,6 +9,7 @@ public class Nothing extends Autonomous {
     @Override
     public void runPath() {
         //sleep(30000);
-        move(2, 0.5);
+        //move(2, 0.5);
+        moveColourSensor(1);
     }
 }

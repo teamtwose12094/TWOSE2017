@@ -34,6 +34,7 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.Gamepad;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.Range;
 
@@ -65,10 +66,13 @@ public class TeleopTank extends LinearOpMode {
     //double          armPosition     = robot.ARM_HOME;                   // Servo safe position
     //double          clawPosition    = robot.CLAW_HOME;                  // Servo safe position
     final double COLOURSTICK_UP = 0;
-    final double OPEN_LEFT = 0.25;
-    final double CLOSE_LEFT = 0.5;
-    final double OPEN_RIGHT = 0.5;
-    final double CLOSE_RIGHT = 0.25;
+    final double OPEN_LEFT = 0;
+    final double CLOSE_LEFT = 0.32;
+    final double RELIC_CLOSE_LEFT = 0.51;
+    final double OPEN_RIGHT = 1;
+    final double CLOSE_RIGHT = 0.49;
+    final double RELIC_CLOSE_RIGHT = 0.3;
+    public boolean relicMode = false;
     //final double    CLAW_SPEED      = 0.01 ;                            // sets rate to move servo
     //final double    ARM_SPEED       = 0.01 ;                            // sets rate to move servo
 
@@ -100,28 +104,43 @@ public class TeleopTank extends LinearOpMode {
 
             // Use gamepad Y & A raise and lower the arm
             if (gamepad1.a) {
-                robot.armMotor.setPower(-0.7);
+                robot.armMotor.setPower(-0.3);
 
                 //armPosition += ARM_SPEED;
             } else if (gamepad1.y) {
-                robot.armMotor.setPower(0.7);
-
+                robot.armMotor.setPower(0.3);
                 //armPosition -= ARM_SPEED;
 
                 // Use gamepad X & B to open and close the claw
             } else {
                 robot.armMotor.setPower(0);
             }
-
-            if (gamepad1.b) {
-                robot.clawLeft.setPosition(Servo.MIN_POSITION);
-                robot.clawRight.setPosition(Servo.MAX_POSITION);
-            } else if (gamepad1.x) {
-                robot.clawLeft.setPosition(Servo.MIN_POSITION);
-                robot.clawRight.setPosition(Servo.MAX_POSITION);
+            if ((gamepad1.dpad_up) || (gamepad2.dpad_up))  {
+                robot.slideMotor.setPower(0.5);
+            } else if ((gamepad1.dpad_down) || (gamepad2.dpad_down))  {
+                robot.slideMotor.setPower(-0.5);
+            } else {
+                robot.slideMotor.setPower(0);
             }
+            if ((gamepad1.b) || (gamepad2.b)) {
+                    robot.clawLeft.setPosition(OPEN_LEFT);
+                    robot.clawRight.setPosition(OPEN_RIGHT);
 
-            if (gamepad1.right_bumper) {
+            } else if ((gamepad1.x) || (gamepad2.x)) {
+                if (relicMode == false){
+                    robot.clawLeft.setPosition(CLOSE_LEFT);
+                    robot.clawRight.setPosition(CLOSE_RIGHT);}
+                else{
+                    robot.clawLeft.setPosition(RELIC_CLOSE_LEFT);
+                    robot.clawRight.setPosition(RELIC_CLOSE_RIGHT);}
+            }
+            if ((gamepad1.left_bumper) || (gamepad2.left_bumper)) {
+                if (relicMode == false){
+                    relicMode = true;}
+                else{
+                    relicMode = false;}
+            }
+            if ((gamepad1.right_bumper) || (gamepad2.right_bumper)) {
                 robot.colourStick.setPosition(COLOURSTICK_UP);
                 //colourStickPosition = COLOURSTICK_DOWN;
                 //clawPosition += CLAW_SPEED;
