@@ -11,7 +11,7 @@ import com.qualcomm.robotcore.hardware.I2cAddr;
 public abstract class MissionUnloadBlueLeft extends Autonomous implements ColorSensor {
     @Override
     public void runPath() {
-        moveColourSensor(90);
+        /*moveColourSensor(90);
         /*ColorSensor ColourSensor = new ColorSensor() {
             @Override
             public int red() {
@@ -86,16 +86,18 @@ public abstract class MissionUnloadBlueLeft extends Autonomous implements ColorS
         if (ColourSensor.blue() > 80) {
             pivot(90, 0.7);
         }*/
-        detectColour();
+        /*detectColour();
         moveColourSensor(90);
         move(3, 0.7);
         pivot(90, 0.7);
         move(19, 0.7);
         pivot(90, 0.7);
         move(5, 0.7);
-        release();
+        release(); /*
+        /*
     }
 
 }
 
 
+*/}}

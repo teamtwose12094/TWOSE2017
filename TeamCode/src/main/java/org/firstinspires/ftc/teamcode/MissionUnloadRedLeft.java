@@ -8,7 +8,7 @@ package org.firstinspires.ftc.teamcode;
 public class MissionUnloadRedLeft extends Autonomous {
     @Override
     public void runPath() {
-        moveColourSensor(90);
+
         pivot(-90, 0.7);
         dmove(-37.181, 0.7);
         pivot(90, 0.7);
