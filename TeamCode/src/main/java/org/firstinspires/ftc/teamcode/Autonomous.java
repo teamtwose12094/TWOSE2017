@@ -137,12 +137,12 @@ public abstract class Autonomous extends LinearOpMode {
 
     }
 
-    void moveColourSensor (int power){
+    void moveColorSensor (int power){
     robot.colourStick.setPosition(1.0);
     }
-    void detectColour (){
+    void detectColor (){
         ColorSensor SensorRGB;
-        SensorRGB = hardwareMap.colorSensor.get("colour");
+        SensorRGB = hardwareMap.colorSensor.get("color");
         //if(SensorRGB.red() = true);
     }
     public boolean isRed() {
@@ -191,10 +191,6 @@ public abstract class Autonomous extends LinearOpMode {
             else{
                 return false;
             }}
-
-
-
-
 
 
 
