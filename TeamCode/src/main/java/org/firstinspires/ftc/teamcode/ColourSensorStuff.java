@@ -11,15 +11,15 @@ public class ColourSensorStuff extends Autonomous {
     @Override
     public void runPath() {
 
-        moveColorSensor(1);
+        moveColorSensor(0);
 
         while (opModeIsActive()) {
         if (isBlue() == true){
 
             move(-5, 0.7);
         }
-        else if (isRed() == true){
-            move(5, 0.7);
+        else if (isBlue() == false){
+            move(0, 0.7);
         }
     }
 
