@@ -16,10 +16,10 @@ public class ColourSensorStuff extends Autonomous {
         while (opModeIsActive()) {
         if (isBlue() == true){
 
-            move(-3, 0.7);
+            move(-5, 0.7);
         }
         else if (isRed() == true){
-            move(3, 0.7);
+            move(5, 0.7);
         }
     }
 

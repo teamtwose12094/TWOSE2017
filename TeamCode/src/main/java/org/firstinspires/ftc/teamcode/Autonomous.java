@@ -154,13 +154,10 @@ public abstract class Autonomous extends LinearOpMode {
             color_sensor.red(); // Red channel value
             color_sensor.green(); // Green channel value
             color_sensor.blue();// Blue channel value
-            color_sensor.alpha(); // Total luminosity
-            color_sensor.argb();// Combined color value
-
             color_sensor.enableLed(true);// Turn the LED on
             color_sensor.enableLed(false); // Turn the LED off
 
-            if (color_sensor.red() > 20){
+            if (color_sensor.red() > 500){
                 return true;
 
             }
@@ -184,7 +181,7 @@ public abstract class Autonomous extends LinearOpMode {
             color.enableLed(true);// Turn the LED on
             color.enableLed(false); // Turn the LED off
 
-            if (color.blue() > 20){
+            if (color.blue() > 500){
                 return true;
 
             }
