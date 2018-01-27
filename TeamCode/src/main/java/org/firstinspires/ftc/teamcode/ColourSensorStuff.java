@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
  * Created by student on 1/20/2017.
  */
 
-@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "ColourSensorStuff", group = "Autonomous")
+//@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "ColourSensorStuff", group = "Autonomous")
 public class ColourSensorStuff extends Autonomous {
     @Override
     public void runPath() {

@@ -189,7 +189,21 @@ public abstract class Autonomous extends LinearOpMode {
                 return false;
             }}
 
+        void moveArm(int power, int time) {
+            robot.armMotor.setPower(power);
+            for (int i=0; i <= time; i++) {
+                sleep(1);
+            }
+            robot.armMotor.setPower(0);
+        }
 
+    void slideArm(int power, int time) {
+        robot.slideMotor.setPower(power);
+        for (int i=0; i <= time; i++) {
+            sleep(1);
+        }
+        robot.slideMotor.setPower(0);
+    }
 
 
 }

@@ -4,7 +4,7 @@ package org.firstinspires.ftc.teamcode;
  * Created by student on 1/20/2017.
  */
 
-@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "PivotTest", group = "Autonomous")
+//@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "PivotTest", group = "Autonomous")
 public class PivotTest extends Autonomous {
     @Override
     public void runPath() {

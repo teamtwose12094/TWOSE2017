@@ -52,7 +52,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
 
-@TeleOp(name="Teleop FPS", group="K9bot")
+//@TeleOp(name="Teleop FPS", group="K9bot")
 public class TeleopFPS extends LinearOpMode {
 //TODO for a more FPS style control (Left analog stick = movement, Right analog stick = turning)
 //TODO check the unit circle for your left analog stick.

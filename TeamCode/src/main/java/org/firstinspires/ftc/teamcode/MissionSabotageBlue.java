@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode;
 /**
  * Created by student on 1/20/2017.
  */
-@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "MissionSabotageBlue", group = "Autonomous")
+//@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "MissionSabotageBlue", group = "Autonomous")
 public class MissionSabotageBlue extends Autonomous {
     @Override
     protected void runPath() {
