@@ -14,10 +14,11 @@ public class MissionUnloadRedRight extends Autonomous {
             if (isRed() == true){
 
                 move(-5, 0.7);
+                move(5, 0.7);
             }
             else if (isRed() == false){
                 move(5, 0.7);
-            }
+                move(-5, 0.7); }
 
         }
         moveColorSensor(1);

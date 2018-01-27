@@ -16,10 +16,11 @@ public abstract class MissionUnloadBlueLeft extends Autonomous implements ColorS
             if (isBlue() == true){
 
                 move(-5, 0.7);
+                move(5, 0.7);
             }
             else if (isBlue() == false){
                 move(5, 0.7);
-            }
+                move(-5, 0.7); }
 
         }
         moveColorSensor(1);
