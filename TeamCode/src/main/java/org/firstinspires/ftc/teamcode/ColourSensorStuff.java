@@ -10,6 +10,9 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
 public class ColourSensorStuff extends Autonomous {
     @Override
     public void runPath() {
+
+        moveColorSensor(1);
+
         while (opModeIsActive()) {
         if (isBlue() == true){
 

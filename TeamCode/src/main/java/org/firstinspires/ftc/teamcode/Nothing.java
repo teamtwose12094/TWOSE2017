@@ -8,7 +8,7 @@ package org.firstinspires.ftc.teamcode;
 public class Nothing extends Autonomous {
     @Override
     public void runPath() {
-        sleep(10`0000);
+        sleep(100000);
 
     }
 }

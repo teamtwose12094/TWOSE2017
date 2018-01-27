@@ -65,7 +65,7 @@ public class TeleopTank extends LinearOpMode {
     double colourStickPosition = robot.COLOURSTICK_HOME;
     //double          armPosition     = robot.ARM_HOME;                   // Servo safe position
     //double          clawPosition    = robot.CLAW_HOME;                  // Servo safe position
-    final double COLOURSTICK_UP = 0;
+    final double COLOURSTICK_UP = 1;
     final double OPEN_LEFT = 0;
     final double CLOSE_LEFT = 0.32;
     final double RELIC_CLOSE_LEFT = 0.51;
