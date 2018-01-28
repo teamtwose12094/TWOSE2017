@@ -146,24 +146,24 @@ public abstract class Autonomous extends LinearOpMode {
         //if(SensorRGB.red() = true);
     }
     public boolean isRed() {
-        ColorSensor color_sensor;
+        ColorSensor color;
 
-            color_sensor = hardwareMap.colorSensor.get("color");
+            color = hardwareMap.colorSensor.get("color");
 
 // ...
-            color_sensor.red(); // Red channel value
-            color_sensor.green(); // Green channel value
-            color_sensor.blue();// Blue channel value
-            color_sensor.enableLed(true);// Turn the LED on
-            color_sensor.enableLed(false); // Turn the LED off
+            color.red(); // Red channel value
+            color.green(); // Green channel value
+            color.blue();// Blue channel value
+            color.enableLed(true);// Turn the LED on
+            color.enableLed(false); // Turn the LED off
 
-            if (color_sensor.red() > 500){
-                return true;
+        if (color.red() == R.color.bright_red){
+            return true;
+        }
 
-            }
-            else{
-                return false;
-    }}
+            else {
+            return false;}
+    }
 
 
         public boolean isBlue() {
@@ -181,29 +181,30 @@ public abstract class Autonomous extends LinearOpMode {
             color.enableLed(true);// Turn the LED on
             color.enableLed(false); // Turn the LED off
 
-            if (color.blue() > 500){
+            if (color.blue() == R.color.bright_blue){
                 return true;
 
             }
-            else{
-                return false;
-            }}
+            else {
+                return false;}}
 
-        void moveArm(int power, int time) {
-            robot.armMotor.setPower(power);
-            for (int i=0; i <= time; i++) {
-                sleep(1);
-            }
-            robot.armMotor.setPower(0);
-        }
 
-    void slideArm(int power, int time) {
-        robot.slideMotor.setPower(power);
-        for (int i=0; i <= time; i++) {
-            sleep(1);
-        }
-        robot.slideMotor.setPower(0);
-    }
+
+                void moveArm (int power, int time){
+                    robot.armMotor.setPower(power);
+                    for (int i = 0; i <= time; i++) {
+                        sleep(1);
+                    }
+                    robot.armMotor.setPower(0);}
+
+
+                void slideArm ( int power, int time){
+                    robot.slideMotor.setPower(power);
+                    for (int i = 0; i <= time; i++) {
+                        sleep(1);
+                    }
+                    robot.slideMotor.setPower(0);
+                }
 
 
 }
