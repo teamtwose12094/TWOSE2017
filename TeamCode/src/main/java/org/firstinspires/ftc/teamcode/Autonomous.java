@@ -145,28 +145,23 @@ public abstract class Autonomous extends LinearOpMode {
         SensorRGB = hardwareMap.colorSensor.get("color");
         //if(SensorRGB.red() = true);
     }
-    public boolean isRed() {
+    public int redValue() {
         ColorSensor color_sensor;
 
             color_sensor = hardwareMap.colorSensor.get("color");
 
 // ...
-            color_sensor.red(); // Red channel value
+
             color_sensor.green(); // Green channel value
             color_sensor.blue();// Blue channel value
             color_sensor.enableLed(true);// Turn the LED on
             color_sensor.enableLed(false); // Turn the LED off
+            return color_sensor.red(); // Red channel value
 
-            if (color_sensor.red() > 500){
-                return true;
-
-            }
-            else{
-                return false;
-    }}
+    }
 
 
-        public boolean isBlue() {
+        public int blueValue() {
             ColorSensor color;
 
             color = hardwareMap.colorSensor.get("color");
@@ -174,20 +169,14 @@ public abstract class Autonomous extends LinearOpMode {
 // ...
             color.red(); // Red channel value
             color.green(); // Green channel value
-            color.blue();// Blue channel value
             color.alpha(); // Total luminosity
             color.argb();// Combined color value
-
             color.enableLed(true);// Turn the LED on
             color.enableLed(false); // Turn the LED off
+            return color.blue();// Blue channel value
 
-            if (color.blue() > 500){
-                return true;
 
             }
-            else{
-                return false;
-            }}
 
         void moveArm(int power, int time) {
             robot.armMotor.setPower(power);

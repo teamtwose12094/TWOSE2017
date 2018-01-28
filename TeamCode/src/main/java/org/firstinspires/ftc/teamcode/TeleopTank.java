@@ -66,6 +66,7 @@ public class TeleopTank extends LinearOpMode {
     //double          armPosition     = robot.ARM_HOME;                   // Servo safe position
     //double          clawPosition    = robot.CLAW_HOME;                  // Servo safe position
     final double COLOURSTICK_UP = 1;
+    final double COLOURSTICK_DOWN = 0;
     final double OPEN_LEFT = 0;
     final double CLOSE_LEFT = 0.32;
     final double RELIC_CLOSE_LEFT = 0.51;
@@ -140,13 +141,15 @@ public class TeleopTank extends LinearOpMode {
                 else{
                     relicMode = false;}
             }
-            if ((gamepad1.right_bumper) || (gamepad2.right_bumper)) {
+            if ((gamepad1.dpad_left) || (gamepad2.dpad_left)) {
                 robot.colourStick.setPosition(COLOURSTICK_UP);
                 //colourStickPosition = COLOURSTICK_DOWN;
                 //clawPosition += CLAW_SPEED;
             }
 
-
+            if ((gamepad1.dpad_right) || (gamepad2.dpad_right)) {
+                robot.colourStick.setPosition(COLOURSTICK_DOWN);
+            }
 
 
         }
