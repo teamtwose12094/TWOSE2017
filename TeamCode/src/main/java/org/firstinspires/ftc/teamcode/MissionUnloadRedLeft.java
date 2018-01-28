@@ -11,22 +11,22 @@ public class MissionUnloadRedLeft extends Autonomous {
 
         moveColorSensor(0);
         while (opModeIsActive()) {
-            if (isBlue() == true){
+            if (blueValue() > 20){
 
-                move(-5, 0.7);
                 move(5, 0.7);
+                move(-5, 0.7);
             }
-            else if (isBlue() == false){
-                move(5, 0.7);
+            else if (blueValue() > 20){
                 move(-5, 0.7);
+                move(5, 0.7);
             }
 
         }
         moveColorSensor(1);
-        move(-24,0.7);
+        move(24,0.7);
         pivot(90,0.7);
         moveArm(1, 1000);
-        move(7, 0.7);
+        move(-7, 0.7);
 
         sleep(10000);
 }}

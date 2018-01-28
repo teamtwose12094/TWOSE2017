@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
  * Created by student on 1/20/2017.
  */
 
-//@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "ColourSensorStuff", group = "Autonomous")
+@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "ColourSensorStuff", group = "Autonomous")
 public class ColourSensorStuff extends Autonomous {
     @Override
     public void runPath() {
@@ -14,16 +14,19 @@ public class ColourSensorStuff extends Autonomous {
         moveColorSensor(0);
 
         while (opModeIsActive()) {
-        if (isBlue() == true){
+        if (blueValue() > 20){
+            robot.leftMotor.setPower(-0.7);
+            robot.rightMotor.setPower(-0.7);
+            //move(-5, 0.7);
+        while (blueValue() > 20){
+            robot.leftMotor.setPower(0);
+            robot.rightMotor.setPower(0);
+        }}
 
-            move(-5, 0.7);
-        }
-        else if (isBlue() == false){
-            move(0, 0.7);
         }
     }
 
-}}
+}
 
 
 
