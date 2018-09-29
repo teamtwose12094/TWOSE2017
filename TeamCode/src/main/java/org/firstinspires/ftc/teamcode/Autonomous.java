@@ -157,7 +157,7 @@ public abstract class Autonomous extends LinearOpMode {
             color.enableLed(true);// Turn the LED on
             color.enableLed(false); // Turn the LED off
 
-        if (color.red() == R.color.bright_red){
+        if ((color.red() == R.color.bright_red  || ((color.red() > (R.color.bright_red - 20) ) && (color.red() > (R.color.bright_red - 20)))) ){
             return true;
         }
 
@@ -181,7 +181,7 @@ public abstract class Autonomous extends LinearOpMode {
             color.enableLed(true);// Turn the LED on
             color.enableLed(false); // Turn the LED off
 
-            if (color.blue() == R.color.bright_blue){
+            if ((color.blue() == R.color.bright_blue  || ((color.blue() > (R.color.bright_blue - 20) ) && (color.blue() > (R.color.bright_blue - 20))))){
                 return true;
 
             }

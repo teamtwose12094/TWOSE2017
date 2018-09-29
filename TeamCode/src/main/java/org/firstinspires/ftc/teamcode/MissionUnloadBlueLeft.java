@@ -13,12 +13,12 @@ public abstract class MissionUnloadBlueLeft extends Autonomous implements ColorS
     public void runPath() {
         moveColorSensor(0);
         while (opModeIsActive()) {
-            if (blueValue() > 20){
+            if (isBlue() == true){
 
                 move(5, 0.7);
                 move(-5, 0.7);
             }
-            else if (blueValue() > 20){
+            else if (isRed() == true){
                 move(-5, 0.7);
                 move(5, 0.7); }
 

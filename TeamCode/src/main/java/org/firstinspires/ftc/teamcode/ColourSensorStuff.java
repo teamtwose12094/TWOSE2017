@@ -14,14 +14,14 @@ public class ColourSensorStuff extends Autonomous {
         moveColorSensor(0);
 
         while (opModeIsActive()) {
-        if (blueValue() > 20){
+        if (isRed() == true){
             robot.leftMotor.setPower(-0.7);
-            robot.rightMotor.setPower(-0.7);
+            robot.rightMotor.setPower(-0.7);}
             //move(-5, 0.7);
-        while (blueValue() > 20){
+        else if (isBlue() == true){
             robot.leftMotor.setPower(0);
             robot.rightMotor.setPower(0);
-        }}
+        }
 
         }
     }

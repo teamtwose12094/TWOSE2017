@@ -8,7 +8,8 @@ package org.firstinspires.ftc.teamcode;
 public class MissionCornerBlue extends Autonomous {
     @Override
     public void runPath() {
-        move(24, -0.4);
+        move(8, -0.4);
+        sleep(1000000);
     }
 
 }
